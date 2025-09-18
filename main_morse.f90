@@ -34,7 +34,7 @@
       a=-omega*dsqrt(mass/(2.d0*De))
       q0=0.d0
       Eanal=omega*(nu+0.5d0)-((omega*(nu+0.5d0))**2.d0)/(4.d0*De)
-      qdot0=zpe_scaling*dsqrt(Eanal/2.d0)
+      qdot0=zpe_scaling*dsqrt(Eanal*2.d0)
       write(*,*) "E", "p0"
       write(*,*) Eanal, qdot0
 
