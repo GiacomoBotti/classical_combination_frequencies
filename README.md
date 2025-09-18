@@ -16,13 +16,13 @@ The input file for `main_morse.f90` (`input`) allows the user to input the traje
 1.d0 1.d0 0.25d0
 ```
 The initial conditions are provided as vibrational quanta of excitation, following the usual harmonic quantization:
-$$
-q_{0} = q_{\mathrm{eq}} \qquad \qquad \qquad p_{0} = \sqrt{2E_{\mathrm{tot}} (n)}
-$$
+
+$$q_{0} = q_{\mathrm{eq}} \qquad \qquad \qquad p_{0} = \sqrt{2E_{\mathrm{tot}} (n)}$$
+
 where $E_{\mathrm{tot}}$ is the Morse oscillator total energy:
-$$
-E(n) = \omega \left( n +\frac{1}{2} \right) - \frac{\left[ \omega (n + \frac{1}{2} )\right]^{2}}{4D_{e}}
-$$
+
+$$E(n) = \omega \left( n +\frac{1}{2} \right) - \frac{\left[ \omega (n + \frac{1}{2} )\right]^{2}}{4D_{e}}$$
+
 See the paper for further informations. Adding quanta of excitation has no real impact on the classical spectra, but it's a good way to gauge the initial energy. 
 
 The potential parameters are hard-coded into the `potential` and `gradient` subroutines.
