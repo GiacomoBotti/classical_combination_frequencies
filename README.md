@@ -1,6 +1,6 @@
 # Classical Combination Frequencies in a Morse potential
 
-This code has been developed to investigate the presence of classical combination frequencies in a Morse potential, as part of the paper _Classical combination frequencies in classical spectra_. *Please refer to the paper for any additional informations, or contact me*
+This code has been developed to investigate the presence of classical combination frequencies in a Morse potential, as part of the paper _Classical combination frequencies in classical spectra_. **Please refer to the paper for any additional informations, or contact me**
 
 ## The input file
 
@@ -23,7 +23,7 @@ where $E_{\mathrm{tot}}$ is the Morse oscillator total energy:
 
 $$E(n) = \omega \left( n +\frac{1}{2} \right) - \frac{\left[ \omega (n + \frac{1}{2} )\right]^{2}}{4D_{e}}$$
 
-See the paper for further informations. Adding quanta of excitation has no real impact on the classical spectra, but it's a good way to gauge the initial energy. 
+**See the paper for further informations**. Adding quanta of excitation has no real impact on the classical spectra, but it's a good way to gauge the initial energy. 
 
 The potential parameters are hard-coded into the `potential` and `gradient` subroutines.
 
@@ -72,4 +72,4 @@ The code to compute the common $C_{vv}$ or $C_{xx}$ Fourier-spectra is present i
 
 
 
-*References to the methods can be recovered in the paper. Contact me for further informations*
+**References to the methods can be recovered in the paper. Contact me for further informations**
