@@ -41,7 +41,7 @@ The code prints on terminal the initial energy and momentum. The output is print
 - `phase_space.dat` contains the $q$ and $p$ time evolution, to be given in input to the Fourier transform code.
 
 ## The Fourier-transform input
-The input file for `power_spectrum1D.f90` (`FT_input`) allows the user to define the parameters of the Fourier transform procedure:
+The input file for `power_spectrum_1D.f90` (`FT_input`) allows the user to define the parameters of the Fourier transform procedure:
 ```
 !Number of steps to read, step size
 50000 0.1
@@ -51,9 +51,9 @@ The input file for `power_spectrum1D.f90` (`FT_input`) allows the user to define
 The number of steps should be less of equal to that of the classical trajectory, while the step size must be equal to that of the classical trajectory. The `Omega` parameters define the 1D grid on which the Fourier transform is computed.
 
 ## The Fourier-transform run
-To run the `power_spectrum1D.f90` code, first compile it:
+To run the `power_spectrum_1D.f90` code, first compile it:
 ```
-<fortran compiler> power_spectrum1D.f90 -o <FT executable name>
+<fortran compiler> power_spectrum_1D.f90 -o <FT executable name>
 ```
 then use
 ```
