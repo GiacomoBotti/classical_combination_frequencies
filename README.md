@@ -15,7 +15,7 @@ The input file for `main_morse.f90` (`input`) allows the user to input the traje
 !Parameters: omega mass zpe_scaling
 1.d0 1.d0 0.25d0
 ```
-The initial conditions are provided as vibrational quanta of excitation, following the usual harmonic quantization:
+The initial conditions are provided as vibrational quanta of excitation, following the usual quantization scheme:
 
 $$q_{0} = q_{\mathrm{eq}} \qquad \qquad \qquad p_{0} = \sqrt{2E_{\mathrm{tot}} (n)}$$
 
