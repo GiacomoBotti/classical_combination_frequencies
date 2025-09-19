@@ -37,7 +37,7 @@ then use
 ./<main executable name>
 ```
 The code prints on terminal the initial energy and momentum. The output is printed in two files:
-- `energy_plot.dat` contains the time and the total energy at that time, for debugging purposes
+- `energy_plot.dat` contains the time and the total energy at that time, for diagnostics
 - `phase_space.dat` contains the $q$ and $p$ time evolution, to be given in input to the Fourier transform code.
 
 ## The Fourier-transform input
