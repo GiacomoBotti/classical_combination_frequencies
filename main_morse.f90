@@ -3,6 +3,13 @@
 !*********************************************************************!
 
       program oscillator 
+! Code to run the dynamics of a Morse oscillator
+!
+! The dynamics parameters are read from ``input``
+!
+! The energy is plotted in ``energy_plot.dat`` for debugging
+!
+! Position and momentum are plotted in ``phase_space.dat`` 
 
       implicit none
 
@@ -38,7 +45,6 @@
       write(*,*) "E", "p0"
       write(*,*) Eanal, qdot0
 
-
 ! Velocity-Verlet dynamics
 
       open(unit=666,file="energy_plot.dat",status='unknown')
@@ -68,13 +74,26 @@
       end program oscillator
 
 !**********************************************************************
-      
+  
       subroutine potential(omega,a,De,q,qdot,V)
+! Compute the Morse potential energy.
+!
+! The potential is
+!
+! .. math::
+!    V(q) = D_{e}(1 - \exp(aq))^2
+!
+! where :math:`D_{e}` is the dissociation energy and :math:`a` controls the
+! width/asymmetry of the Morse well.
 
-      real*8 :: omega,a,De
-      real*8 :: q,qdot
+      real*8 :: omega ! Harmonic frequency
+      real*8 :: a ! Morse potential parameter
+      real*8 :: De ! Morse potential parameter
+      real*8 :: q ! Position
+      real*8 :: qdot ! Position velocity
       real*8 :: q1,qdot1
-      real*8 :: V,V1
+      real*8 :: V ! Potential
+      real*8 :: V1
 
       q1=q
       qdot1=qdot
@@ -85,11 +104,18 @@
       end subroutine potential
 
 !**********************************************************************
-   
       subroutine gradient(omega,a,De,q,qdot,qddot)
+! Compute the acceleration for the Morse potential.
+!
+! This returns the quantity used by the velocity-Verlet scheme.
 
-      real*8 :: omega,a,De,esp
-      real*8 :: q,qdot,qddot
+      real*8 :: omega ! Harmonic frequency
+      real*8 :: a ! Morse potential parameter
+      real*8 :: De ! Morse potential parameter
+      real*8 :: esp
+      real*8 :: q ! Position
+      real*8 :: qdot ! Position velocity
+      real*8 :: qddot ! Force
       real*8 :: q1,qdot1,qddot1
       
       q1=q

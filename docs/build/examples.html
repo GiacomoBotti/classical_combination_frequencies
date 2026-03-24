@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example &mdash; Classical Combination Bands: A Model System 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/plot_directive.css?v=7f9a90b1" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=404a92a0"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fortran API" href="files.html" />
+    <link rel="prev" title="Classical Combination Frequencies in a Morse potential" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Classical Combination Bands: A Model System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Classical Combination Frequencies in a Morse potential</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-main">Running the <code class="docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-power-spectrum">Running the <code class="docutils literal notranslate"><span class="pre">power_spectrum</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check">Check</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">Fortran API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Classical Combination Bands: A Model System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example">
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h1>
+<section id="running-the-main">
+<h2>Running the <code class="docutils literal notranslate"><span class="pre">main</span></code><a class="headerlink" href="#running-the-main" title="Permalink to this heading"></a></h2>
+<p>To run the <code class="docutils literal notranslate"><span class="pre">main_morse.f90</span></code> code, first compile it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fortran</span> <span class="n">compiler</span><span class="o">&gt;</span> <span class="n">main_morse</span><span class="o">.</span><span class="n">f90</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">main</span> <span class="n">executable</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>then use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">main</span> <span class="n">executable</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="running-the-power-spectrum">
+<h2>Running the <code class="docutils literal notranslate"><span class="pre">power_spectrum</span></code><a class="headerlink" href="#running-the-power-spectrum" title="Permalink to this heading"></a></h2>
+<p>To run the <code class="docutils literal notranslate"><span class="pre">power_spectrum1D.f90</span></code> code, first compile it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fortran</span> <span class="n">compiler</span><span class="o">&gt;</span> <span class="n">power_spectrum1D</span><span class="o">.</span><span class="n">f90</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">FT</span> <span class="n">executable</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>then use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">FT</span> <span class="n">executable</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="check">
+<h2>Check<a class="headerlink" href="#check" title="Permalink to this heading"></a></h2>
+<p>To check if the code run successfully, compare your outputs with the provided example files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example_energy_plot</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">example_phase_space</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">example_power_spectrum_p</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">example_power_spectrum_q</span><span class="o">.</span><span class="n">dat</span>
+</pre></div>
+</div>
+<p>(<a class="reference download internal" download="" href="_downloads/0f7281e4e5077b82826d0755e0c9e1a3/examples-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/443b3325d1ef6f13542c948969ed1f94/examples-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/8d245670b7c62f9d73b7bf9d01796656/examples-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/bb67110000826cb41615812dcdf1168a/examples-1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/examples-1.png" class="plot-directive" src="_images/examples-1.png" />
+</figure>
+<p>(<a class="reference download internal" download="" href="_downloads/cef22becb8b3ad220da4c46155a464b1/examples-2.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/70040da93e8ccb5cc2e1cb162d25cebc/examples-2.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/06c9bf2580e5c6a51064d51e9812a051/examples-2.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/1806978e8dc326aabfcbef10bd4bac8a/examples-2.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/examples-2.png" class="plot-directive" src="_images/examples-2.png" />
+</figure>
+<p>(<a class="reference download internal" download="" href="_downloads/75bcd3765d563cd74844cc6c2bf1c4e9/examples-3.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/ebd36bcb2ef2dd068451a76e74811a8e/examples-3.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/daa03c7c3179490f77603d859c0463bc/examples-3.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/05d87f3ad37482728645f47d26edeb43/examples-3.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/examples-3.png" class="plot-directive" src="_images/examples-3.png" />
+</figure>
+<p>(<a class="reference download internal" download="" href="_downloads/4bde66124b5d2217b6f000327e791864/examples-4.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/df440d85f3e2f58dc8e143945b498894/examples-4.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/feae51ef88b496f65988bcaec1a988dd/examples-4.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/62791f2c76dcf11061765902a29a42bf/examples-4.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/examples-4.png" class="plot-directive" src="_images/examples-4.png" />
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="README.html" class="btn btn-neutral float-left" title="Classical Combination Frequencies in a Morse potential" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="files.html" class="btn btn-neutral float-right" title="Fortran API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Giacomo Botti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

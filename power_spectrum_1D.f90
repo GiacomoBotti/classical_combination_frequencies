@@ -1,8 +1,19 @@
 !*********************************************************************!
 ! Code to compute classical VDOS                                      !
 !*********************************************************************!
-
       program powerspectrum1D
+! Compute 1D power spectrum
+! 
+! This program reads a time-dependent signal and computes its
+! power spectrum using Fourier transform techniques.
+!
+! The Fourier Transform parameters are in ``FT_input``
+!
+! Position and momentum are read in ``phase_space.dat``
+!
+! The position spectrum is printed in ``power_spectrum_q.dat``
+!
+! The momenta spectrum is printed in ``power_spectrum_p.dat``
 
       implicit none
 
