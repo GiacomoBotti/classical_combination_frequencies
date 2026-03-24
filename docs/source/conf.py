@@ -12,6 +12,7 @@ project = 'Classical Combination Bands: A Model System'
 copyright = '2026, Giacomo Botti'
 author = 'Giacomo Botti'
 release = '1'
+version = '1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
