@@ -95,6 +95,13 @@ Finally, use the proper theme for ReadTheDocs:
 html_theme = 'sphinx_rtd_theme'
 ```
 
+and remove
+
+```
+html_static_path = ['_static']
+```
+
+
 ## The `index.rst` file
 
 The `index.rst` contain the main page of the website. Let's include some files in the `toc`:
@@ -191,6 +198,7 @@ sphinx-build -M clean docs/source docs/build/
 ## Build the `.readthedocs.yaml` file
 
 Now it's time to create the file that will guide ReadTheDocs in the creation of the website, `.readthedocs.yaml`:
+
 ```
 version: 2
 
@@ -213,4 +221,13 @@ formats:
   - pdf
   - epub
 ```
+
 The `os:` variable is referring to the servers, and the `python:` variable should be chosen carefully. `format` allows the generation of a downloadable documentation.
+
+## Create the page
+
+1. Go to ReadTheDocs and login with your GitHub account
+2. Add a new project
+3. Link the repository: if no repo is found, install the app and refresh
+4. Look at the building process
+5. Honestly? Use ChatGPT for troubleshooting
