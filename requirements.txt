@@ -1,0 +1,7 @@
+sphinx
+sphinx-rtd-theme
+sphinx-fortran
+myst-parser
+six
+numpy
+matplotlib

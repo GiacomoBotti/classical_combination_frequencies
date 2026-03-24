@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fortran API &mdash; Classical Combination Bands: A Model System 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=404a92a0"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Example" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Classical Combination Bands: A Model System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Classical Combination Frequencies in a Morse potential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fortran API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#morse-dynamics">Morse Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-spectrum">Power Spectrum</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Classical Combination Bands: A Model System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fortran API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fortran-api">
+<h1>Fortran API<a class="headerlink" href="#fortran-api" title="Permalink to this heading"></a></h1>
+<section id="morse-dynamics">
+<h2>Morse Dynamics<a class="headerlink" href="#morse-dynamics" title="Permalink to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object f" id="f/oscillator">
+<em class="property"><span class="pre">program</span>&#160; </em><span class="sig-name descname"><span class="pre">oscillator</span></span><a class="headerlink" href="#f/oscillator" title="Permalink to this definition"></a></dt>
+<dd><p>Code to run the dynamics of a Morse oscillator</p>
+<p>The dynamics parameters are read from <code class="docutils literal notranslate"><span class="pre">input</span></code></p>
+<p>The energy is plotted in <code class="docutils literal notranslate"><span class="pre">energy_plot.dat</span></code> for debugging</p>
+<p>Position and momentum are plotted in <code class="docutils literal notranslate"><span class="pre">phase_space.dat</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Call to<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/_/gradient" title="f/_/gradient"><code class="xref f f-func docutils literal notranslate"><span class="pre">gradient()</span></code></a>, <a class="reference internal" href="#f/_/potential" title="f/_/potential"><code class="xref f f-func docutils literal notranslate"><span class="pre">potential()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/_/potential">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-name descname"><span class="pre">potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">omega</span></em>, <em class="sig-param"><span class="pre">a</span></em>, <em class="sig-param"><span class="pre">de</span></em>, <em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">qdot</span></em>, <em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/potential" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the Morse potential energy.</p>
+<p>The potential is</p>
+<div class="math notranslate nohighlight">
+\[V(q) = D_{e}(1 - \exp(aq))^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(D_{e}\)</span> is the dissociation energy and <span class="math notranslate nohighlight">\(a\)</span> controls the
+width/asymmetry of the Morse well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>omega</strong><em> [</em><em>real</em><em>]</em> :: Harmonic frequency</p></li>
+<li><p><strong>a</strong><em> [</em><em>real</em><em>]</em> :: Morse potential parameter</p></li>
+<li><p><strong>de</strong><em> [</em><em>real</em><em>]</em> :: Morse potential parameter</p></li>
+<li><p><strong>q</strong><em> [</em><em>real</em><em>]</em> :: Position</p></li>
+<li><p><strong>qdot</strong><em> [</em><em>real</em><em>]</em> :: Position velocity</p></li>
+<li><p><strong>v</strong><em> [</em><em>real</em><em>]</em> :: Potential</p></li>
+</ul>
+</dd>
+<dt class="field-even">Called from<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#f/oscillator" title="f/oscillator"><code class="xref f f-prog docutils literal notranslate"><span class="pre">oscillator</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/_/gradient">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">omega</span></em>, <em class="sig-param"><span class="pre">a</span></em>, <em class="sig-param"><span class="pre">de</span></em>, <em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">qdot</span></em>, <em class="sig-param"><span class="pre">qddot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/gradient" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the acceleration for the Morse potential.</p>
+<p>This returns the quantity used by the velocity-Verlet scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>omega</strong><em> [</em><em>real</em><em>]</em> :: Harmonic frequency</p></li>
+<li><p><strong>a</strong><em> [</em><em>real</em><em>]</em> :: Morse potential parameter</p></li>
+<li><p><strong>de</strong><em> [</em><em>real</em><em>]</em> :: Morse potential parameter</p></li>
+<li><p><strong>q</strong><em> [</em><em>real</em><em>]</em> :: Position</p></li>
+<li><p><strong>qdot</strong><em> [</em><em>real</em><em>]</em> :: Position velocity</p></li>
+<li><p><strong>qddot</strong><em> [</em><em>real</em><em>]</em> :: Force</p></li>
+</ul>
+</dd>
+<dt class="field-even">Called from<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#f/oscillator" title="f/oscillator"><code class="xref f f-prog docutils literal notranslate"><span class="pre">oscillator</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="power-spectrum">
+<h2>Power Spectrum<a class="headerlink" href="#power-spectrum" title="Permalink to this heading"></a></h2>
+<dl>
+<dt class="sig sig-object f" id="f/powerspectrum1d">
+<em class="property"><span class="pre">program</span>&#160; </em><span class="sig-name descname"><span class="pre">powerspectrum1d</span></span><a class="headerlink" href="#f/powerspectrum1d" title="Permalink to this definition"></a></dt>
+<dd><p>Compute 1D power spectrum</p>
+<p>This program reads a time-dependent signal and computes its
+power spectrum using Fourier transform techniques.</p>
+<p>The Fourier Transform parameters are in <code class="docutils literal notranslate"><span class="pre">FT_input</span></code></p>
+<p>Position and momentum are read in <code class="docutils literal notranslate"><span class="pre">phase_space.dat</span></code></p>
+<p>The position spectrum is printed in <code class="docutils literal notranslate"><span class="pre">power_spectrum_q.dat</span></code></p>
+<p>The momenta spectrum is printed in <code class="docutils literal notranslate"><span class="pre">power_spectrum_p.dat</span></code></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Giacomo Botti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
